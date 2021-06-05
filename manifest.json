@@ -1,13 +1,13 @@
 {
   "name": "Quadrant",
-  "desctiption": "Quadrant on google tab",
+  "description": "Quadrant on google tab",
   "version": "1.0",
-  "manifest_version": 2,
-  "browser_action": {
-    "default_popup": "./src/popup.html"
-  },
+  "manifest_version": 3,
   "background": {
-    "service_worker": "./src/background.js"
+    "service_worker": "background.js"
   },
-  "permissions": ["storage","active"]
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "/src/popup.html"
+  }
 }
