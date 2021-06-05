@@ -17,7 +17,7 @@ changeColor.addEventListener("click", async () => {
   // current page
   function setPageBackgroundColor() {
     chrome.storage.sync.get("color", ({ color }) => {
-      //document.body.style.backgroundImage = 'https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68';
+      //document.body.style.backgroundImage = "url('https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68')";
       document.body.style.backgroundColor = color;
     });
   }
