@@ -3,12 +3,12 @@
 *This is a work in progress
 
 **This repo will contains source code for google extension with below feature after completion**
-- Replace new tab page with a high-resolution image and clock.
+- Replace new tab page with a high-resolution image and clock - done
 - A button to swicth between image and priority quadrant screen
 - Priority Quadrant screen to manage your daily task
 
 ---------------------------------------------------------------------------------------------------------------
-**current working functionality : change back ground of any webpage to green color**
+**current working functionality : Replace new tab page with a high-resolution image and clock. **
 
 How to run in local :- 
 - clone repo
@@ -18,5 +18,3 @@ How to run in local :-
 
 Current functionality use  use :- 
 - open any webpage
-- click on button in extension icon.
-- backgound color will change
