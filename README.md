@@ -17,4 +17,4 @@ How to run in local :-
 - select folder containing manifest.json
 
 Current functionality use :- 
-- open any webpage
+- open new tab
