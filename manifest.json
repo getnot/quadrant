@@ -4,10 +4,7 @@
   "version": "1.0",
   "manifest_version": 3,
   "permissions": ["tabs"],
-  "action": {
-    "default_popup": "chrome://newtab"
-  },
   "chrome_url_overrides": {
-    "newtab": "/src/background.html"
+    "newtab": "/src/main.html"
   }
 }
