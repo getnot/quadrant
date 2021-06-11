@@ -16,5 +16,5 @@ How to run in local :-
 - click on load unpacked extenion
 - select folder containing manifest.json
 
-Current functionality use  use :- 
+Current functionality use :- 
 - open any webpage
