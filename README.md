@@ -1,5 +1,14 @@
-# quadrant
+# Quadrant
 
+*This is a work in progress
+
+**This repo will contains source code for google extension with below feature after completion**
+- Replace new tab page with a high-resolution image and clock.
+- A button to swicth between image and priority quadrant screen
+- Priority Quadrant screen to manage your daily task
+
+---------------------------------------------------------------------------------------------------------------
+**current working functionality : change back ground of any webpage to green color**
 
 How to run in local :- 
 - clone repo
