@@ -1,4 +1,6 @@
+console.log("123");
 
 chrome.action.onClicked.addListener(() => {
-  chrome.tabs.create({ url: "chrome://newtab" })
+  console.log("123");
+  chrome.tabs.create({ url: 'chrome://newtab' });
 })
