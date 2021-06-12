@@ -32,7 +32,10 @@ document.getElementById("gear").onclick = (event) => {
     }
 }
 
-document.getElementById("refresh").onclick = () => fetchBackGroundImageFromIndexDb(true);
+document.getElementById("refresh").onclick = () => {
+    fetchBackGroundImageFromIndexDb(true);
+    updateJoke();
+}
 
 
 var quadrantStorage = 'quadrantStorage';
@@ -98,9 +101,13 @@ fetchAndSaveNewbackgoundImageImage = (imageKey) => {
 }
 
 // fetch jo mama joke
-fetch('https://yomomma-api.herokuapp.com/jokes')
+updateJoke = () => {
+    fetch('https://yomomma-api.herokuapp.com/jokes')
     .then(res => res.json())
     .then(data => {
         document.getElementById("jo-mama").innerHTML = `<p> ${data.joke} </p>`;
     })
     .catch(error => console.log(error));
+}
+
+updateJoke();
