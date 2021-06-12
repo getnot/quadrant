@@ -3,7 +3,11 @@
   "description": "Quadrant on google tab",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "storage"],
+  "host_permissions": ["https://*.herokuapp.com/*", "*"],
+  "optional_permissions": [
+    "unlimitedStorage"
+  ],
   "chrome_url_overrides": {
     "newtab": "/src/main.html"
   }
