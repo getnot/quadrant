@@ -4,7 +4,7 @@
 
 **This repo will contains source code for google extension with below feature after completion**
 - Replace new tab page with a high-resolution image and clock - done
-- A button to swicth between image and priority quadrant screen - button added
+- A button to swicth between image and priority quadrant screen - added
 - Priority Quadrant screen to manage your daily task
 
 ---------------------------------------------------------------------------------------------------------------
@@ -17,5 +17,6 @@ How to run in local :-
 - select folder containing manifest.json
 
 Current functionality use :- 
-- open new tab each time new image will be rendred
-- clock can be movd
+- analog clock
+- button added to refresh back wallpaper
+- button addde to switch quadrant space
