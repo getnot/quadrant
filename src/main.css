@@ -1,20 +1,72 @@
-body {
-    background-image: url('https://unsplash.it/1920/1080'), url('../assets/nature.jpeg');
- }
+* {
+    box-sizing: border-box;
+}
+
+#main-container {
+    display: grid;
+    grid-template-columns: 5% auto;
+    /* align-content: center; */
+}
+
+#side-bar {
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: 70px ;
+    justify-items: center;
+    height: 100vh;
+}
+
+ #gear {
+    margin-top: 24px;
+    height: 2vw;
+    /* width: 2vw; */
+    border-radius: 50%;
+    background-size: 100%;
+    /* align-content: center; */
+}
+
+#refresh {
+    height: 1.5vw;
+    /* width: 1.5vw; */
+    border-radius: 50%;
+    background-size: 100%;
+    /* align-content: center; */
+}
+
+#main {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: self-end;
+}
+
+#quadrant {
+    display: none;
+    grid-template-columns: auto auto;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+
+#q-1,#q-2,#q-3,#q-4  {
+    background-color: teal;
+    height: 48vh;
+}
+
+#jo-mama {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+}
 
 
 #clockContainer {
-    position: absolute;
-    /* margin: auto; */
+    position: relative;
     height: 7vw;
-    right: 0px;
-    top: 0px;
-    /*to make the height and width responsive*/
     width: 7vw;
     background: url('../assets/clock.png');
     border-radius: 50%;
-    /*setting our background image*/
     background-size: 100%;
+    opacity: 40%;
 }
   
 #hour,
@@ -49,24 +101,3 @@ body {
     left: 49.25%;
     opacity: 0.8;
 }
-
-
-.switch {
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;            
-    /* box-shadow: 0 0 20px #eee; */
-    border-radius: 10px;
-    display: block;
-    background-image: linear-gradient(to right, #000000 0%, #434343  51%, #000000  100%);
-}
-
- .switch:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
