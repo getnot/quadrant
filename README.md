@@ -20,3 +20,4 @@ Current functionality use :-
 - analog clock
 - button added to refresh back wallpaper
 - button addde to switch quadrant space
+- yo mama jokes added
