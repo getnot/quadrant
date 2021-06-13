@@ -5,7 +5,7 @@
 **This repo will contains source code for google extension with below feature after completion**
 - Replace new tab page with a high-resolution image and clock - done
 - A button to swicth between image and priority quadrant screen - done
-- Priority Quadrant screen to manage your daily task
+- Priority Quadrant screen to manage your daily task - add/remove added
 
 ---------------------------------------------------------------------------------------------------------------
 **current working functionality : Replace new tab page with a high-resolution image and clock. **
@@ -22,3 +22,5 @@ Current functionality use :-
 - button addded to switch quadrant space
 - yo mama jokes added
 - now click on extension icon to open tab
+- add task using form button
+- click on tak to remove
