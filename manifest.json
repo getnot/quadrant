@@ -3,11 +3,17 @@
   "description": "Quadrant on google tab",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["tabs", "storage"],
-  "host_permissions": ["https://*.herokuapp.com/*", "*"],
-  "optional_permissions": [
-    "unlimitedStorage"
-  ],
+  "action": {
+    "default_icon": {               
+      "32": "/assets/quadrant_icon.png"   
+    },
+    "default_title": "Quadrant"
+  },
+  "permissions": ["tabs", "storage", "unlimitedStorage"],
+  "host_permissions": ["https://*.herokuapp.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
   "chrome_url_overrides": {
     "newtab": "/src/main.html"
   }
