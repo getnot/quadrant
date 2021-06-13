@@ -26,6 +26,10 @@ document.getElementById("gear").onclick = (event) => {
     if (isQuadrant) {
         document.getElementById("main").style.display = "none";
         document.getElementById("quadrant").style.display = "grid";
+        quadrantTasker(1, false, null);
+        quadrantTasker(2, false, null);
+        quadrantTasker(3, false, null);
+        quadrantTasker(4, false, null);
     } else {
         document.getElementById("quadrant").style.display = "none";
         document.getElementById("main").style.display = "grid";
@@ -104,3 +108,97 @@ fetch('https://yomomma-api.herokuapp.com/jokes')
         document.getElementById("jo-mama").innerHTML = `<p> ${data.joke} </p>`;
     })
     .catch(error => console.log(error));
+
+quadrantTasker = async (quadrantId, addtask, deleteTask ) => {
+    chrome.storage.sync.get(['quadrantTasklist'], (result) => {
+        let quadrantTasks = result.quadrantTasklist ? result.quadrantTasklist : new Map();
+        let taskList = quadrantTasks[quadrantId] ? quadrantTasks[quadrantId] : [];
+
+        if (addtask) {
+            let form_div_id = `q-${quadrantId}-f`;
+            let task = document.getElementById(form_div_id).value;
+            document.getElementById(form_div_id).value = '';
+            if (task) {
+                taskList = addTask(quadrantTasks, quadrantId, task, taskList);
+                populateTasks(quadrantId, null, task);
+            }
+        } else if(deleteTask) {
+            taskList = taskList.filter(task => task != deleteTask);
+            quadrantTasks[quadrantId] = taskList;
+            chrome.storage.sync.set({ quadrantTasklist: quadrantTasks }, () => {
+                console.log('Value is set to ' , quadrantTasks);
+            });
+        } else {
+            populateTasks(quadrantId, taskList, null);
+        }
+
+        
+    });
+}
+
+addTask = (quadrantTasks, quadrantId, task , taskList) => {
+    taskList.push(task);
+    quadrantTasks[quadrantId] = taskList;
+    chrome.storage.sync.set({ quadrantTasklist: quadrantTasks }, () => {
+        console.log('Value is set to ' , quadrantTasks);
+    });
+    return taskList;
+}
+
+populateTasks = async (quadrantId, taskList, task) => {
+    // let text_div_id = `q-${quadrantId}-t`;
+    // quadrant1List = document.getElementById(text_div_id);
+    // let newListElement = document.createElement("li"); 
+    // li.innerHTML = task;
+    // quadrant1.innerHTML = (
+    //     ` <div>
+    //          ${taskList.map((task, index) => `<input type="checkbox" id="${text_div_id + '-' + index}"><label for="${text_div_id + '-' + index}">${task}</label><br>`).join("\n")}
+    //      </div>`
+    // );
+
+    let text_div_id = `q-${quadrantId}-t`;
+    quadrant1List = document.getElementById(text_div_id);
+    console.log("populate taskkk", taskList, task);
+    if (taskList) {
+        taskList.forEach(element => {
+            addtaskInTaskListAndAttachListner(quadrantId, quadrant1List, element);
+        });
+    } else {
+        addtaskInTaskListAndAttachListner(quadrantId, quadrant1List, task);
+    }
+
+}
+
+addtaskInTaskListAndAttachListner = (quadrantId, ul, task) => {
+
+    let li = document.createElement("li");
+    li.innerHTML = task;
+    li.onclick = () => {
+        ul.removeChild(li);
+        quadrantTasker(quadrantId, null, task);
+    }
+
+    if (ul.childElementCount == 0) {
+        ul.appendChild(li);
+    } else {
+        ul.insertBefore(li, ul.firstChild);
+    }
+}
+
+document.getElementById("q-1-b").onclick = (event) => {
+    event.preventDefault();
+    quadrantTasker(1, true, null)
+};
+document.getElementById("q-2-b").onclick = (event) => {
+    event.preventDefault();
+    quadrantTasker(2, true, null)
+};
+document.getElementById("q-3-b").onclick = (event) => {
+    event.preventDefault();
+    quadrantTasker(3, true, null)
+};
+document.getElementById("q-4-b").onclick = (event) => {
+    event.preventDefault();
+    quadrantTasker(4, true, null)
+};
+

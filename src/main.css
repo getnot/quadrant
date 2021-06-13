@@ -47,8 +47,16 @@
 }
 
 #q-1,#q-2,#q-3,#q-4  {
-    background-color: teal;
+    display: block;
+    border-radius: 2%;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    background-color: rgba(225, 25, 8, 0.43);
     height: 48vh;
+    font-weight: 300;
+    display: block;
+    font-size: 1rem;
+    line-height: 1;
 }
 
 #jo-mama {
