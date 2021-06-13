@@ -4,7 +4,7 @@
 
 **This repo will contains source code for google extension with below feature after completion**
 - Replace new tab page with a high-resolution image and clock - done
-- A button to swicth between image and priority quadrant screen - added
+- A button to swicth between image and priority quadrant screen - done
 - Priority Quadrant screen to manage your daily task
 
 ---------------------------------------------------------------------------------------------------------------
@@ -19,5 +19,6 @@ How to run in local :-
 Current functionality use :- 
 - analog clock
 - button added to refresh back wallpaper
-- button addde to switch quadrant space
+- button addded to switch quadrant space
 - yo mama jokes added
+- now click on extension icon to open tab
