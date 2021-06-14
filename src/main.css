@@ -63,8 +63,8 @@
     line-height: 1;
     overflow: hidden;
     color: white;
-    
 }
+
 .input-form {
     width: 70%;
     /* display: block; */
@@ -110,6 +110,12 @@
     border-radius: 25px;
     padding: 10px;
     margin-bottom: 2px;
+    transition: transform 300ms ease-in;
+}
+
+.task li:hover {
+    transform: scale(1.02);
+    background-color: rgba(211, 211, 211, 0.219);
 }
 
 #jo-mama {
