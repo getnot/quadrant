@@ -26,10 +26,6 @@ document.getElementById("gear").onclick = (event) => {
     if (isQuadrant) {
         document.getElementById("main").style.display = "none";
         document.getElementById("quadrant").style.display = "grid";
-        quadrantTasker(1, false, null);
-        quadrantTasker(2, false, null);
-        quadrantTasker(3, false, null);
-        quadrantTasker(4, false, null);
     } else {
         document.getElementById("quadrant").style.display = "none";
         document.getElementById("main").style.display = "grid";
@@ -171,6 +167,9 @@ populateTasks = async (quadrantId, taskList, task) => {
 
 addtaskInTaskListAndAttachListner = (quadrantId, ul, task) => {
 
+    if (task === "") {
+        return ;
+    }
     let li = document.createElement("li");
     li.innerHTML = task;
     li.onclick = () => {
@@ -202,3 +201,8 @@ document.getElementById("q-4-b").onclick = (event) => {
     quadrantTasker(4, true, null)
 };
 
+
+quadrantTasker(1, false, null);
+quadrantTasker(2, false, null);
+quadrantTasker(3, false, null);
+quadrantTasker(4, false, null);
