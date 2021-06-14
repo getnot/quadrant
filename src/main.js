@@ -201,6 +201,31 @@ document.getElementById("q-4-b").onclick = (event) => {
     quadrantTasker(4, true, null)
 };
 
+document.getElementById("q-1-f").onkeyup = (event) => {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        quadrantTasker(1, true, null)
+    }
+};
+document.getElementById("q-2-f").onkeyup = (event) => {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        quadrantTasker(2, true, null)
+    }
+};
+document.getElementById("q-3-f").onkeyup = (event) => {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        quadrantTasker(3, true, null)
+    }
+};
+document.getElementById("q-4-f").onkeyup = (event) => {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        quadrantTasker(4, true, null)
+    }
+};
+
 
 quadrantTasker(1, false, null);
 quadrantTasker(2, false, null);
