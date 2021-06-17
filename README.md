@@ -23,4 +23,4 @@ Current functionality use :-
 - yo mama jokes added
 - now click on extension icon to open tab
 - add task using form button
-- click on tak to remove
+- click on task to remove
